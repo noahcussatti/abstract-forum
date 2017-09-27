@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+	margin: 0;
+  padding: 0;
+  /* Animated Background */
+  background: #BABABA url('https://sftextures.com/texture/2705/1/2703/primitives-shades-of-grey-basic-math-figures-lines-light-white-gray-colors-wallpaper-pattern-texture-512x512.jpg') repeat 0 0;
+	-webkit-animation: 10s linear 0s normal none infinite animate;
+	-moz-animation: 10s linear 0s normal none infinite animate;
+	-ms-animation: 10s linear 0s normal none infinite animate; 
+	-o-animation: 10s linear 0s normal none infinite animate;
+	animation: 10s linear 0s normal none infinite animate;
+}
+
+/* Animated Background Animations */
+@-webkit-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 512px 0;}
+}
+ 
+@-moz-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 512px 0;}
+}
+ 
+@-ms-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 512px 0;}
+}
+ 
+@-o-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 512px 0;}
+}
+ 
+@keyframes animate {
+	from {background-position: 0 0;}
+	to {background-position: 512px 0;}
+}
+
+/*Nav Bar*/
+
+.forumNav {
+  font-size: 18px;
+  height: 75px;
+  background-color: rgba(38, 38, 38, 0.80);
+  padding-top: 25px;
+  padding-left: 4%;
+  overflow: hidden;
+}
+
+.forumNavItems a {
+  display: inline;
+  color: white;
+  padding: 26px 30px;
+  overflow: hidden;
+}
+
+.forumNavItems a:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.74);
+}
+
+.forumNavItems li {
+  display: inline;
+}
+
+.navbarIcon {
+  width: 20px;
+  height: 20px;
+  margin-top: -4px;
+  margin-right: 2px;
+}
+
+.navbarProfileIcon {
+  width: 40px;
+  height: 40px;
+  margin-top: -8px;
+  margin-right: 5px;
+}
+
+/* Home */
+
+.homeTitle {
+  background-color: rgba(38, 38, 38, 0.65);
+  color: white;
+  border-radius: 6px;
+  padding: 7px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.userCount {
+  color: white;
+  background-color: rgba(38, 38, 38, 0.65);
+  border-radius: 6px;
+  float: right;
+  margin-right: 20px;
+  padding: 15px;
+}
+
+.homeTop {
+  margin-top: 15px;
+}
+
+.registrationInstructions {
+  background-color: rgba(38, 38, 38, 0.65);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+
+}
+
+/* User */
+
+.userHeader {
+  background-color: #231212;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: rgba(38, 38, 38, 0.65);
+  color: white;
+  overflow: hidden;
+}
+
+.userHeading {
+  font-size: 25px;
+  padding: 20px;
+  margin: 0;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.userBody {
+  background-color: rgba(38, 38, 38, 0.65);
+  padding: 20px;
+  margin-bottom: 40px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Profile Pictures */
+
+.profilePicture {
+  width: 64px;
+  height: 64px;
+  float: right;
+  margin-top: -50px;
+  margin-right: 20px;
+}
+
+.profilePictureProfile {
+  width: 128px;
+  height: 128px;
+  margin: 10px;
+}
+
+.profilePictureCount {
+  height: 32px;
+  width: 32px;
+  margin: 2px;
+}
+  
+.img {
+  height: 300px;
+  width: 50%;
+}
+
+/* Forum */
+
+.forumThreadContainer {
+  width: 96%;
+  height: 100px;
+  margin: 2%;
+  background-color: white;
+  border-radius: 6px;
+  border: solid 1px lightgray;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.forumThreadHeader {
+  height: 100px;
+  border-radius: 6px;
+  margin-left: -16px;
+  padding-right: 9%;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.forumThreadView {
+  float: right;
+}
+
+.forumThreadText {
+  padding: 10px;
+}
+
+.postParagraph, .postUser {
+  background-color: rgba(38, 38, 38, 0.65);
+  color: white;
+  border-radius: 4px;
+  height: 155px;
+  overflow: hidden;
+}
+
+.postUser {
+  padding: 10px;
+  float: left;
+}
+
+.postParagraph {
+  padding: 15px;
+  float: right;
+}
+
+.postPic {
+  height: 100px;
+  width: 100px;
+}
+
+.upvote {
+  float: right;
+}
+
+.totalUpvote {
+  color: black;
+}
+
+.replyParagraph {
+  font-weight: 200;
+  color: rgba(29, 29, 29, 0.65)
+}
+
+.forum-discussion, .forum-rules {
+  background-color: rgba(38, 38, 38, 0.65);
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  height: 120px;
+}

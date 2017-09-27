@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Applications",
+    "paragraph": "Please submit your applications for moderator here.  In your app, please state your name, age, and reason for desiring moderator.",
+    "upvote": 3,
+    "user": {
+      "id": 1,
+      "userName": "Admin",
+      "password": "test",
+      "email": "test.test@gmail.com",
+      "profilePicture": "https://cdn2.iconfinder.com/data/icons/users-6/100/USER8-512.png",
+      "birthDate": "2000-10-12T08:00:00.000Z",
+      "isCurrentUser": false
+    }
+  }
+]

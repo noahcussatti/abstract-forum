@@ -1,0 +1,48 @@
+<!-- NavBar -->
+<div class="forumNav">
+  <ul class="forumNavItems">
+    <li><a ui-sref="home"><img src="https://image.flaticon.com/icons/svg/23/23665.svg" class="navbarIcon">Home</a></li>
+    <li><a ui-sref="forum"><img src="https://maxcdn.icons8.com/Share/icon/Data//list1600.png" class="navbarIcon">Forum</a></li>
+    <li><a ui-sref="users"><img src="http://simpleicon.com/wp-content/uploads/multy-user.png" class="navbarIcon">Users</a></li>
+    <li ng-show="showSignIn"><a ui-sref="signInUser"><img src="https://www.shareicon.net/download/2015/12/15/688028_open_512x512.png" class="navbarIcon">Sign In</a></li>
+    <li ng-show="!showSignIn"><a ui-sref="profileUser ({id: {{ theCurrentUser.id }} })"><img src="{{ theCurrentUser.profilePicture }}" class="navbarProfileIcon img-rounded">{{ theCurrentUser.userName }}</a></li>
+    <li ng-show="!showSignIn" ng-click="signOutUser()"><a ui-sref="home"><img src="https://image.flaticon.com/icons/svg/32/32567.svg" class="navbarIcon">Sign Out</a></li>
+  </ul>
+</div>
+<div class="container">
+  <!-- Location -->
+  <div class="homeTop">
+    <div class="col-sm-12 homeTitle">
+      <span>Home > Users</span>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Search For Users -->
+    <h2 class="searchUser animated fadeInLeft">Search For Users</h2>
+    <div class="form-group col-sm-8 animated fadeInLeft">
+      <input type="text" class="form-control" placeholder="Search" ng-model="userSearch">
+    </div>
+    <!-- Register Account Button -->
+    <div class="createUser col-sm-4 text-center animated fadeInRight">
+      <h3>Need an Account?</h3>
+      <button class="btn btn-primary" ui-sref="newUser">Create a User</button>
+    </div>
+  </div>
+  <!-- Shows All Users -->
+  <div class="row userSection">
+    <div class="userContainer col-md-3 animated fadeInUp" ng-repeat="user in users | filter: userSearch">
+      <div class="userHeader">
+        <h1 class="userHeading">{{ user.userName }}</h1>
+        <img class="profilePicture img-rounded" src="{{ user.profilePicture }}">
+      </div>
+      <div ng-show="signedIn" class="signedIn">
+        <em>Signed In</em>
+      </div>
+      <div class="userBody">
+        <a ui-sref="profileUser({id: {{ user.id }} })">
+          <button class="btn btn-primary">View Profile</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

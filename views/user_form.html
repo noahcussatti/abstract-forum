@@ -1,0 +1,52 @@
+<!-- NavBar -->
+<div class="forumNav">
+  <ul class="forumNavItems">
+    <li><a ui-sref="home"><img src="https://image.flaticon.com/icons/svg/23/23665.svg" class="navbarIcon">Home</a></li>
+    <li><a ui-sref="forum"><img src="https://maxcdn.icons8.com/Share/icon/Data//list1600.png" class="navbarIcon">Forum</a></li>
+    <li><a ui-sref="users"><img src="http://simpleicon.com/wp-content/uploads/multy-user.png" class="navbarIcon">Users</a></li>
+    <li ng-show="showSignIn"><a ui-sref="signInUser"><img src="https://www.shareicon.net/download/2015/12/15/688028_open_512x512.png" class="navbarIcon">Sign In</a></li>
+    <li ng-show="!showSignIn"><a ui-sref="profileUser ({id: {{ theCurrentUser.id }} })"><img src="{{ theCurrentUser.profilePicture }}" class="navbarProfileIcon img-rounded">{{ theCurrentUser.userName }}</a></li>
+    <li ng-show="!showSignIn" ng-click="signOutUser()"><a ui-sref="home"><img src="https://image.flaticon.com/icons/svg/32/32567.svg" class="navbarIcon">Sign Out</a></li>
+  </ul>
+</div>
+<div class="container">
+  <!-- Location -->
+  <div class="homeTop">
+    <div class="col-sm-12 homeTitle">
+      <span>Home > Users > {{ formHeader }}</span>
+    </div>
+  </div>
+  <!-- Header (Couuld be Create or Update User) -->
+  <h1 class="hero animated fadeIn">{{ formHeader }}</h1>
+  <!-- Create/Update User Inputs -->
+  <div class="row registrationInstructions">
+    <!-- Username -->
+    <div class="form-group col-md-6 animated fadeIn">
+      <label>User Name</label>
+      <input type="text" class="form-control" placeholder="User Name" style="color: white;" ng-model="user.userName" required>
+    </div>
+    <!-- Password -->
+    <div class="form-group col-md-6 animated fadeIn">
+      <label>Password</label>
+      <input type="password" class="form-control" placeholder="Password" style="color: white;" ng-model="user.password">
+    </div>
+    <!-- Email -->
+    <div class="form-group col-md-4 animated fadeIn">
+      <label>Email</label>
+      <input type="text" class="form-control" placeholder="test@test.com" style="color: white;" ng-model="user.email">
+    </div>
+    <!-- Profile Picture -->
+    <div class="form-group col-md-4 animated fadeIn">
+      <label>Profile Picture</label>
+      <input type="text" class="form-control" placeholder="http://profilepic.com" style="color: white;" ng-model="user.profilePicture">
+    </div>
+    <!-- Date of Birth -->
+    <div class="form-group col-md-4">
+      <label>Date of Birth</label>
+      <input type="date" class="form-control animated fadeIn" placeholder="mm/dd/yyyy" style="color: white;" ng-model="user.birthDate">
+    </div>
+    <!-- Submit/Save Button -->
+    <button ng-show="submitButton " ng-click="addUser()" class="btn btn-primary pull-right animated fadeIn">Submit</button>
+    <button ng-show="updateButton" ng-click="updateUser()" class="btn btn-info pull-right animated fadeIn">Update</button>
+  </div>
+</div>

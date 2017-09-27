@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Introductions",
+    "paragraph": "If you are new to the forum, we encourage you to post an introduction here so we can get to know you!",
+    "upvote": 2,
+    "user": {
+      "id": 1,
+      "userName": "Admin",
+      "password": "test",
+      "email": "test.test@gmail.com",
+      "profilePicture": "https://cdn2.iconfinder.com/data/icons/users-6/100/USER8-512.png",
+      "birthDate": "2000-10-12T08:00:00.000Z",
+      "isCurrentUser": false
+    }
+  }
+]

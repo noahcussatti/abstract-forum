@@ -1,0 +1,41 @@
+<!-- NavBar -->
+<div class="forumNav">
+  <ul class="forumNavItems">
+    <li><a ui-sref="home"><img src="https://image.flaticon.com/icons/svg/23/23665.svg" class="navbarIcon">Home</a></li>
+    <li><a ui-sref="forum"><img src="https://maxcdn.icons8.com/Share/icon/Data//list1600.png" class="navbarIcon">Forum</a></li>
+    <li><a ui-sref="users"><img src="http://simpleicon.com/wp-content/uploads/multy-user.png" class="navbarIcon">Users</a></li>
+    <li ng-show="showSignIn"><a ui-sref="signInUser"><img src="https://www.shareicon.net/download/2015/12/15/688028_open_512x512.png" class="navbarIcon">Sign In</a></li>
+    <li ng-show="!showSignIn"><a ui-sref="profileUser ({id: {{ theCurrentUser.id }} })"><img src="{{ theCurrentUser.profilePicture }}" class="navbarProfileIcon img-rounded">{{ theCurrentUser.userName }}</a></li>
+    <li ng-show="!showSignIn" ng-click="signOutUser()"><a ui-sref="home"><img src="https://image.flaticon.com/icons/svg/32/32567.svg" class="navbarIcon">Sign Out</a></li>
+  </ul>
+</div>
+<div class="container">
+  <!-- Location -->
+  <div class="homeTop">
+    <div class="col-sm-8 homeTitle">
+      <span>Home</span>
+    </div>
+    <!-- User Count -->
+    <div class="col-sm-3 userCount animated fadeInRight">
+      <span>Total User Count: {{ users.length }}</span>
+      <div><img ng-repeat="user in users" class="profilePictureCount img-rounded" src="{{ user.profilePicture }}"></div>
+    </div>
+  </div>
+
+  <div class="row animated fadeIn">
+    <h1 class="text-center animated fadeInLeft">Welcome to the Abstract Forum!</h1>
+    <div class="col-sm-8 registrationInstructions animated fadeInLeft">
+      <h4>If you would like to use this website to its fullest, please create an Account</h4>
+      <h4>To create an account, click on the "Users" tab on the Navbar, then click Create a User!</h4>
+    </div>
+
+    <div class="col-sm-8 registrationInstructions animated fadeInLeft">
+      <h3>What are the Benefits of Creating an Account?</h3>
+      <ul>
+        <p>You may reply to threads</p>
+        <p>You may upvote other user's posts.</p>
+      </ul>
+    </div>
+
+  </div>
+</div>
